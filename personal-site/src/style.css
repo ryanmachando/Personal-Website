@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -294,3 +296,28 @@ code {
     border-right-color: var(--border);
   }
 }
+
+/* Style the navbar */
+#navbar {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: flex;
+  color: #f2f2f2;
+  text-align: center;
+  justify-content: space-between;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+

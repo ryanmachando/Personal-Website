@@ -1,0 +1,105 @@
+{
+  "name": "Ryan Machando",
+  "title": "Software Engineering Graduate",
+  "bio": "Software Engineering graduate with a strong foundation in full-stack development, database design, and algorithm implementation. I build web applications from concept to deployment and have hands-on experience with AI concepts including genetic algorithms and neural networks.",
+  "location": "Milton Keynes, UK",
+  "email": "ryanmachando@gmail.com",
+  "phone": "+44 7425364313",
+  "nav": [
+    { "label": "About", "href": "#about" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/ryan-atipa-machando-6b288626b/",
+    "github": "https://github.com/ryanmachando"
+  },
+  "education": [
+    {
+      "institution": "University of Portsmouth",
+      "degree": "BSc (Hons) Software Engineering",
+      "dates": "September 2023 – July 2026",
+      "grade": "2:1",
+      "details": "Key modules: Database Principles, Artificial Intelligence, Networks, Data Structures & Algorithms, Complex Problem Solving."
+    }
+  ],
+  "skills": {
+    "languages": ["Python", "JavaScript", "Dart", "SQL"],
+    "frontend": ["HTML5", "CSS3", "JavaScript (DOM, Fetch API)"],
+    "backend": ["Node.js", "Flask", "RESTful APIs", "WebSockets"],
+    "databases": ["PostgreSQL", "SQLite", "Database Normalization", "Query Optimization"],
+    "ai_ml": ["Genetic Algorithms", "Neural Networks", "Model Training & Evaluation", "Backpropagation", "Hyperparameter Tuning"],
+    "tools": ["Git", "GitHub", "VS Code", "IntelliJ", "MATLAB", "Figma"]
+  },
+  "experience": [
+    {
+      "company": "University of Portsmouth",
+      "role": "Student Information Assistant",
+      "dates": "October 2024 – May 2026",
+      "achievements": [
+        "Coordinated with a team to organize and run career events for students, working with over 50 companies to ensure smooth logistics and communication.",
+        "Conducted drop-in sessions to assist students with CVs and cover letters, offering personalized feedback to up to 30 students a day.",
+        "Demonstrated strong communication and teamwork skills while supporting students in identifying job opportunities."
+      ]
+    },
+    {
+      "company": "University of Portsmouth",
+      "role": "Clearing Assistant",
+      "dates": "August 2024",
+      "achievements": [
+        "Collaborated with a team to assist prospective students applying to the university through the clearing process.",
+        "Processed student applications, ensuring accuracy and adherence to university guidelines.",
+        "Co-ordinated decision making and offer processing, requiring analytical thinking and organisational skills.",
+        "Facilitated communication with applicants — providing timely updates, resolving queries, and guiding individuals through the clearing process."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Automated Study Assistant",
+      "subtitle": "Final Year Project",
+      "dates": "October 2025 – July 2026",
+      "description": "Full-stack web app that processes user-uploaded study notes using rule-based NLP (spaCy) to automatically generate flashcards and multiple-choice quizzes. Includes a progress-tracking dashboard that visualises quiz performance over time and surfaces priority revision topics — differentiating it from tools like Anki and Notability.",
+      "tags": ["Python", "Flask", "spaCy", "JavaScript", "HTML/CSS", "SQLite"],
+      "demo": "",
+      "repo": ""
+    },
+    {
+      "name": "AI Spider Kinematics Optimisation",
+      "subtitle": "Group Project",
+      "dates": "October 2025 – November 2025",
+      "description": "Engineered a Genetic Algorithm to evolve optimal joint configurations for a spider model — involving chromosome encoding, fitness function design, and mutation operators. Trained a Feedforward Neural Network to predict valid joint angles, managing the full ML pipeline from data preparation to model training and performance visualisation.",
+      "tags": ["MATLAB", "Genetic Algorithms", "Neural Networks", "Python"],
+      "demo": "",
+      "repo": ""
+    },
+    {
+      "name": "Python Voice Assistant",
+      "subtitle": "Personal Project",
+      "dates": "October 2025",
+      "description": "Interactive voice assistant capable of real-time speech processing and task execution. Integrated the ElevenLabs Conversational AI API for end-to-end voice processing, including speech recognition, LLM response generation, and text-to-speech synthesis. Includes system command execution and web search based on voice input.",
+      "tags": ["Python", "ElevenLabs API", "Speech Recognition"],
+      "demo": "",
+      "repo": ""
+    },
+    {
+      "name": "Resource Allocation Tool",
+      "subtitle": "Group Project",
+      "dates": "October 2024 – March 2025",
+      "description": "Collaborated in an agile team to build an automated tool for optimizing project resource allocation based on team member availability and skill alignment. Contributed to a clean, intuitive UI and worked on optimizing the core allocation algorithm for scalability and efficiency.",
+      "tags": ["Agile", "Algorithms", "UI/UX"],
+      "demo": "",
+      "repo": ""
+    },
+    {
+      "name": "Race Timer Web Application",
+      "subtitle": "Coursework",
+      "dates": "October 2024 – March 2025",
+      "description": "Architected a real-time timing system designed to handle 500+ concurrent inputs, with a strong emphasis on fault tolerance and data integrity. Implemented race timer initiation, offline data recording, and batch upload — under the constraint of no third-party libraries.",
+      "tags": ["JavaScript", "Real-time", "Vanilla JS"],
+      "demo": "",
+      "repo": ""
+    }
+  ]
+}
