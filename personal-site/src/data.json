@@ -3,6 +3,8 @@
   "title": "Software Engineering Graduate",
   "bio": "Software Engineering graduate with a strong foundation in full-stack development, database design, and algorithm implementation. I build web applications from concept to deployment and have hands-on experience with AI concepts including genetic algorithms and neural networks.",
   "location": "Milton Keynes, UK",
+  "headshot": "/headshot.jpg",
+  "resume": "/resume.pdf",             
   "email": "ryanmachando@gmail.com",
   "phone": "+44 7425364313",
   "nav": [
