@@ -42,7 +42,7 @@ app.innerHTML = `
     </div>
   </nav>
 
-  <div class="max-w-4xl mx-auto px-6">
+ 
 <section id="hero" class="min-h-svh flex items-center relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-6 w-full relative z-10">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -75,18 +75,47 @@ app.innerHTML = `
     </div>
   </section>
 
+<section id="experience" class="py-24">
+<div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12">Experience</h2>
+
+      <div class="space-y-8">
+        ${data.experience.map(job => `
+          <article class="border-l-4 border-blue-600 pl-6 py-2">
+            <div class="flex flex-wrap items-center gap-3 mb-1">
+              <h3 class="font-bold text-lg">${job.company}</h3>
+              <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
+                ${job.dates}
+              </span>
+            </div>
+
+            <p class="italic text-gray-700 mb-4">${job.role}</p>
+
+            <ul class="list-disc list-inside space-y-2 text-gray-600">
+              ${job.achievements.map(a => `<li>${a}</li>`).join('')}
+            </ul>
+          </article>
+        `).join('')}
+      </div>
+    </div>
+  </section>
+</div>
 
 
-    <footer class="py-12 border-t border-gray-200 flex justify-center gap-6">
-      <a href="${data.social.linkedin}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <img src="/linkedin.svg" alt="LinkedIn" class="w-6 h-6" />
-      </a>
-      <a href="${data.social.github}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <img src="/github.svg" alt="GitHub" class="w-6 h-6" />
-      </a>
+
+    <footer class="py-12 border-t border-gray-200">
+      <div class="max-w-4xl mx-auto px-6 flex justify-center gap-6">
+        <a href="${data.social.linkedin}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="/linkedin.svg" alt="LinkedIn" class="w-6 h-6" />
+        </a>
+          <a href="${data.social.github}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+           <img src="/github.svg" alt="GitHub" class="w-6 h-6" />
+        </a>
+      </div>
     </footer>
   </div>
 `
+
 
 // --- Hamburger toggle ---
 const toggle = document.querySelector('#menu-toggle')
@@ -101,3 +130,8 @@ toggle.addEventListener('click', () => {
   iconClose.classList.toggle('hidden')
   toggle.setAttribute('aria-expanded', String(!isOpen))
 })
+
+const renderExperience = () => `...`;
+const renderHero = () => `...`;
+const renderProjects = () => `...`;
+
