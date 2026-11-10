@@ -76,30 +76,50 @@ app.innerHTML = `
   </section>
 
 <section id="experience" class="py-24">
-<div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-12">Experience</h2>
+  <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12">Experience</h2>
+        <div class="space-y-8">
+          ${data.experience.map(job => `
+            <article class="border-l-4 border-blue-600 pl-6 py-2">
+              <div class="flex flex-wrap items-center gap-3 mb-1">
+                <h3 class="font-bold text-lg">${job.company}</h3>
+                <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
+                  ${job.dates}
+                </span>
+              </div>
 
-      <div class="space-y-8">
-        ${data.experience.map(job => `
-          <article class="border-l-4 border-blue-600 pl-6 py-2">
-            <div class="flex flex-wrap items-center gap-3 mb-1">
-              <h3 class="font-bold text-lg">${job.company}</h3>
-              <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
-                ${job.dates}
-              </span>
-            </div>
+              <p class="italic text-gray-700 mb-4">${job.role}</p>
 
-            <p class="italic text-gray-700 mb-4">${job.role}</p>
+              <ul class="list-disc list-inside space-y-2 text-gray-600">
+                ${job.achievements.map(a => `<li>${a}</li>`).join('')}
+              </ul>
+            </article>
+          `).join('')}
+        </div>
+      </div>
+    </section>
 
-            <ul class="list-disc list-inside space-y-2 text-gray-600">
-              ${job.achievements.map(a => `<li>${a}</li>`).join('')}
-            </ul>
-          </article>
-        `).join('')}
+
+  <section id="projects" class="py-24 ">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      ${data.projects.map(project => `
+        <article class=" py-2">
+          <div class="flex flex-wrap items-center gap-3 mb-1">
+            <h3 class="font-bold text-lg">${project.name}</h3>
+            <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
+              ${project.dates}
+            </span>
+          </div>
+
+          <p class="text-gray-700 mb-4">${project.description}</p>
+
+        </article>
+      `).join('')}
       </div>
     </div>
   </section>
-</div>
 
 
 
@@ -113,7 +133,7 @@ app.innerHTML = `
         </a>
       </div>
     </footer>
-  </div>
+ 
 `
 
 
@@ -131,7 +151,5 @@ toggle.addEventListener('click', () => {
   toggle.setAttribute('aria-expanded', String(!isOpen))
 })
 
-const renderExperience = () => `...`;
-const renderHero = () => `...`;
-const renderProjects = () => `...`;
+
 
