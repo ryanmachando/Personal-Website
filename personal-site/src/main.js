@@ -133,9 +133,51 @@ app.innerHTML = `
         </a>
       </div>
     </footer>
+
+<section id="contact" class="py-24">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-12">Contact</h2>
+
+    <form id="contact-form" action="https://formspree.io/f/moedadvq" method="POST"
+          class="max-w-lg space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your name</label>
+        <input type="text" id="name" name="name" required
+               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your email</label>
+        <input type="email" id="email" name="email" required
+               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+
+      <div>
+        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+        <input type="text" id="subject" name="subject" required
+               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your message</label>
+        <textarea id="message" name="message" required rows="5"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+
+      <button type="submit"
+              class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+        Send message
+      </button>
+    </form>
+
+    <div id="form-success" class="hidden max-w-lg bg-green-50 border border-green-200 text-green-800 rounded-lg p-6">
+      <p class="font-medium text-lg">✓ Thank you!</p>
+      <p class="mt-1">Your message has been sent. I'll get back to you soon.</p>
+    </div>
+  </div>
+</section
  
 `
-
 
 // --- Hamburger toggle ---
 const toggle = document.querySelector('#menu-toggle')
@@ -151,5 +193,36 @@ toggle.addEventListener('click', () => {
   toggle.setAttribute('aria-expanded', String(!isOpen))
 })
 
+// --- Contact form ---
+const form = document.querySelector('#contact-form')
+const formSuccess = document.querySelector('#form-success')
 
+form.addEventListener('submit', async (e) => {
+  e.preventDefault()
+
+  const emailInput = form.querySelector('#email')
+
+  // Custom validation — roadmap asks for an alert on invalid email
+  if (!emailInput.validity.valid) {
+    alert('Please enter a valid email address.')
+    return
+  }
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    })
+
+    if (response.ok) {
+      form.classList.add('hidden')
+      formSuccess.classList.remove('hidden')
+    } else {
+      alert('Something went wrong. Please try again.')
+    }
+  } catch (err) {
+    alert('Network error. Please check your connection and try again.')
+  }
+})
 

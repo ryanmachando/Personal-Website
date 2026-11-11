@@ -9,8 +9,9 @@
   "phone": "+44 7425364313",
   "nav": [
     { "label": "About", "href": "#about" },
-    { "label": "Experience", "href": "#experience" },
     { "label": "Projects", "href": "#projects" },
+    { "label": "Skills", "href": "#skills" },
+    { "label": "Experience", "href": "#experience" },
     { "label": "Contact", "href": "#contact" }
   ],
   "social": {

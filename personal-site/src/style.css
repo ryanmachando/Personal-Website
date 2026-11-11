@@ -20,6 +20,18 @@ body {
   100% { background-position: 0% 50%; }
 }
 
+.skill-pill {
+  transition: color 180ms ease, background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.skill-pill:hover {
+  color: #1d4ed8;
+  background-color: #eff6ff;
+  box-shadow: 0 0 18px rgb(59 130 246 / 35%);
+  transform: translateY(-2px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   body { animation: none; }
+  .skill-pill { transition: none; }
 }
