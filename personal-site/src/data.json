@@ -11,6 +11,7 @@
     { "label": "About", "href": "#about" },
     { "label": "Projects", "href": "#projects" },
     { "label": "Skills", "href": "#skills" },
+    { "label": "Certifications", "href": "#certifications" },
     { "label": "Experience", "href": "#experience" },
     { "label": "Contact", "href": "#contact" }
   ],
@@ -35,6 +36,16 @@
     "ai_ml": ["Genetic Algorithms", "Neural Networks", "Model Training & Evaluation", "Backpropagation", "Hyperparameter Tuning"],
     "tools": ["Git", "GitHub", "VS Code", "IntelliJ", "MATLAB", "Figma"]
   },
+  "certifications": [
+    {
+      "name": "Python Essentials",
+      "file": "/certificates/certificate.pdf"
+    },
+    {
+      "name": "Software Development Job Simulation",
+      "file": "/certificates/L3NcyCoAjLno9d3T9_gCW7Xki5Y3vNpBmnn_6adf8a742a45c6c2364bf009_1794343739718_completion_certificate.pdf"
+    }
+  ],
   "experience": [
     {
       "company": "University of Portsmouth",
@@ -66,7 +77,7 @@
       "description": "Full-stack web app that processes user-uploaded study notes using rule-based NLP (spaCy) to automatically generate flashcards and multiple-choice quizzes. Includes a progress-tracking dashboard that visualises quiz performance over time and surfaces priority revision topics — differentiating it from tools like Anki and Notability.",
       "tags": ["Python", "Flask", "spaCy", "JavaScript", "HTML/CSS", "SQLite"],
       "demo": "",
-      "repo": ""
+      "repo": "https://github.com/ryanmachando/Virtual-Study-Assistant"
     },
     {
       "name": "AI Spider Kinematics Optimisation",
@@ -102,7 +113,7 @@
       "description": "Architected a real-time timing system designed to handle 500+ concurrent inputs, with a strong emphasis on fault tolerance and data integrity. Implemented race timer initiation, offline data recording, and batch upload — under the constraint of no third-party libraries.",
       "tags": ["JavaScript", "Real-time", "Vanilla JS"],
       "demo": "",
-      "repo": ""
+      "repo": "https://github.com/ryanmachando/Race-timer"
     }
   ]
 }
